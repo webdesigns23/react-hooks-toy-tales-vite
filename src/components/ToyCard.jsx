@@ -2,7 +2,7 @@ import React from "react";
 
 function ToyCard() {
   return (
-    <div className="card">
+    <div className="card" data-testid="toy-card">
       <h2>{"" /* Toy's Name */}</h2>
       <img
         src={"" /* Toy's Image */}
