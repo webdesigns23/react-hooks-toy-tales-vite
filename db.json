@@ -10,13 +10,13 @@
       "id": "2",
       "name": "Buzz Lightyear",
       "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 14
+      "likes": 15
     },
     {
       "id": "3",
       "name": "Mr. Potato Head",
       "image": "https://vignette.wikia.nocookie.net/universe-of-smash-bros-lawl/images/d/d8/Mr-potato-head-toy-story.gif/revision/latest?cb=20151129131217",
-      "likes": 3
+      "likes": 6
     },
     {
       "id": "4",
@@ -64,12 +64,18 @@
       "id": "048c",
       "name": "Jessie",
       "image": "https://www.pngmart.com/files/3/Toy-Story-Jessie-PNG-File.png",
-      "likes": 0
+      "likes": 2
     },
     {
       "id": "74f7",
       "name": "Rex 2.0",
       "image": "https://www.pngmart.com/files/12/Toy-Story-Character-PNG-Transparent-Image.png",
+      "likes": 1
+    },
+    {
+      "id": "9ec9",
+      "name": "Bullseye",
+      "image": "https://www.pngmart.com/files/12/Toy-Story-PNG-Picture.png",
       "likes": 0
     }
   ]

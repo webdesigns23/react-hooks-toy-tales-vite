@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 
-function ToyForm({ addToy }) {
+function ToyForm({ handleAddToy }) {
   const [toyData, setToyData] = useState({
     name: "",
     image: "",
@@ -24,7 +24,7 @@ function ToyForm({ addToy }) {
       })
       // use prop to add new listing to state and clear state
       .then(newToy => {
-        addToy(newToy)
+        handleAddToy(newToy)
         setToyData({
           name: "",
           image: "",
@@ -73,3 +73,4 @@ function ToyForm({ addToy }) {
 }
 
 export default ToyForm;
+

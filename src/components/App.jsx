@@ -8,7 +8,7 @@ function App() {
   const [showForm, setShowForm] = useState(false);
   const [toys, setToys] = useState([]);
 
-  //onLoad list all toys
+  //OnLoad list all toys
   useEffect(() => {
     const fetchToys = async () => {
       try {
@@ -26,26 +26,39 @@ function App() {
     fetchToys();
   }, []);
 
-
-  function handleClick() {
+  //Add Toy
+  function handleAddClick() {
     setShowForm((showForm) => !showForm);
   }
 
-  // Add Toy
-  const addToy = newToy => setToys(previousToys => [...previousToys, newToy])
+  const handleAddToy = newToy => setToys(previousToys => [...previousToys, newToy])
+
+  //Delete Toy
+  const handleDeleteToy = deletedToyId => setToys(previousToys => previousToys.filter(toy => toy.id !== deletedToyId))
+
+  //Update toy likes
+  function handleUpdateToy(updatedToy) {
+    const updatedToys = toys.map((toy) =>
+      toy.id === updatedToy.id ? updatedToy : toy
+    );
+    setToys(updatedToys);
+  }
 
   return (
     <>
       <Header />
-      {showForm ? <ToyForm addToy={addToy}/> : null}
+      {showForm ? <ToyForm handleAddToy={handleAddToy} /> : null}
       <div className="buttonContainer">
-        <button onClick={handleClick}>Add a Toy</button>
+        <button onClick={handleAddClick}>Add a Toy</button>
       </div>
       <ToyContainer
-        toys={toys} />
+        toys={toys}
+        onDeleteToy={handleDeleteToy}
+        onUpdateToy={handleUpdateToy} />
     </>
   );
 }
 
 export default App;
+
 
